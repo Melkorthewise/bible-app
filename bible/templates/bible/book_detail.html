@@ -1,0 +1,9 @@
+<h1>{{ book.name }}</h1>
+<h2>Chapters</h2>
+<ul>
+  {% for chapter in chapters %}
+    <li><a href="{% url 'chapter_detail' book.id chapter.number %}">Chapter {{ chapter.number }}</a></li>
+  {% endfor %}
+</ul>
+<a href="{% url 'book_list' %}">Back to Books</a>
+

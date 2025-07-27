@@ -1,0 +1,8 @@
+<h1>{{ chapter.book.name }} Chapter {{ chapter.number }}</h1>
+<ol>
+  {% for verse in verses %}
+    <li><strong>{{ verse.number }}</strong> {{ verse.text }}</li>
+  {% endfor %}
+</ol>
+<a href="{% url 'book_detail' chapter.book.id %}">Back to {{ chapter.book.name }}</a>
+
